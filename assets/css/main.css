@@ -1686,34 +1686,50 @@ footer {
 .box {
 	background: #ffffff;
 	border-bottom: solid 1px #ccc;
-	padding: 2.75em 1.75em 2.75em 1.75em;
+	padding: 1em 0.75em 1em 0.75em;
+	/* Ajusta el padding para reducir el espacio alrededor del contenido */
 }
 
-.box .image.featured {
+/*.box .image.featured {
 	position: relative;
 	width: auto;
 	left: 1.75em;
 	top: 1.75em;
 	margin: -4.5em 0 4.25em -3.5em;
-}
+}*/
 
 .box.post header {
-	padding-top: 1em;
-	margin: 0 0 2em 0;
+	padding-top: 0.5em;
+	/* Ajusta el padding-top para reducir el espacio sobre el encabezado */
+	margin: 0 0 1em 0;
+	/* Ajusta el margen inferior para reducir el espacio debajo del encabezado */
 }
 
-.box.post h2 {
-	font-size: 2.5em;
+.box.post h3 {
+	/* Ajusta la etiqueta a h3 para coincidir con la etiqueta en tu sección de Game Masters */
+	font-size: 1.5em;
+	/* Ajusta el tamaño de fuente para reducir el tamaño del encabezado */
 	letter-spacing: -0.015em;
 }
 
 .box.post header>p {
-	margin-top: 1.25em;
-	font-size: 1.25em;
+	margin-top: 1em;
+	font-size: 1em;
 }
 
 .box footer ul.actions {
 	margin-bottom: 0;
+}
+
+/* Ajustes para la sección Game Masters */
+.box .gm-info {
+	margin-bottom: 0.5em;
+	/* Ajusta el margen inferior para reducir la distancia entre los elementos */
+}
+
+.box .rating {
+	margin-bottom: 0.5em;
+	/* Ajusta el margen inferior para reducir la distancia entre las estrellas y el botón */
 }
 
 /* Button */
@@ -1834,6 +1850,43 @@ button.large,
 	float: left;
 	margin: 0 2em 2em 0;
 }
+
+/* Profile picture and rating */
+
+.profile-picture img {
+	width: 200px;
+	/* Ajusta el tamaño según prefieras */
+	height: 200px;
+	object-fit: cover;
+	border-radius: 50%;
+	/* Hace que la imagen sea circular */
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.rating {
+	font-size: 1.2em;
+	/* Ajusta el tamaño de las estrellas */
+	color: #ffc107;
+	/* Color amarillo para las estrellas */
+	text-align: center;
+	margin-bottom: 0.3em;
+}
+
+.rating .fas {
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.review-count {
+	font-size: 0.8em;
+	/* Ajusta el tamaño del texto según prefieras */
+	color: #333;
+	/* Ajusta el color del texto según prefieras */
+	margin-left: 5px;
+}
+
 
 /* List */
 
@@ -2323,6 +2376,31 @@ ul.social li a.fa-google-plus:hover {
 	font-size: 1.5em;
 }
 
+/* Únete a GM*/
+#join-gm-section {
+	background-image: url('../../images/tree_horizon.jpg');
+	/* Cambia 'tu-imagen-de-fondo.jpg' por la ruta de tu imagen de fondo */
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 400px;
+	/* Ajusta la altura de la sección aquí */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.join-gm-section-inner {
+	background-color: rgba(255, 255, 255, 0.8);
+	/* Ajusta el color de fondo y la opacidad del cartel aquí */
+	padding: 1.5em;
+	border-radius: 5px;
+	text-align: center;
+}
+
+
 /* Intro */
 
 #intro {
@@ -2410,18 +2488,6 @@ ul.social li a.fa-google-plus:hover {
 	position: relative;
 	color: #858484;
 	padding: 4em 0;
-}
-
-#footer:before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background: url("images/bg01.png");
-	background-size: 100% 100%;
-	z-index: 0;
-	opacity: 0.5;
 }
 
 #footer a {
@@ -3090,4 +3156,49 @@ ul.social li a.fa-google-plus:hover {
 		padding: 40px 0 20px 0;
 	}
 
+}
+
+/* New Footer */
+#footer {
+	background-color: #353434;
+	/* Ajusta el color de fondo del footer aquí */
+	padding: 1.5em 0;
+}
+
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.social-icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.social-icons a {
+	margin: 0 1em;
+	font-size: 1.5em;
+}
+
+.contact-info {
+	text-align: right;
+}
+
+.contact-info h3 {
+	margin-bottom: 0.5em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	.footer-content {
+		flex-direction: column;
+		gap: 1em;
+	}
+
+	.contact-info {
+		text-align: center;
+	}
 }
