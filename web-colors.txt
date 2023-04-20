@@ -1,0 +1,3 @@
+rosa:  #d52349
+
+dorado: #d6ba1a
