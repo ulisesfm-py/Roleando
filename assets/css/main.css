@@ -291,7 +291,7 @@ table {
 .container {
 	margin: 0 auto;
 	max-width: 100%;
-	width: 70em;
+	padding: 5em;
 }
 
 @media screen and (max-width: 1680px) {
@@ -1672,14 +1672,14 @@ header {
 	width: 100%;
 	position: relative;
 	z-index: 1000;
-	margin: 0 0 1.5em 0;
+	margin: 0 0 0em 0;
 }
 
 header>p {
 	display: block;
 	font-style: italic;
 	margin: 0.5em 0 0 0;
-	padding-bottom: 0.5em;
+	padding-bottom: 0.0em;
 }
 
 header.major {
@@ -1696,7 +1696,7 @@ header.major h2 {
 	top: -0.65em;
 	display: inline;
 	margin: 0;
-	padding: 0 1em 0 1em;
+	padding: 0 0em 0 0em;
 }
 
 footer {
@@ -1723,7 +1723,7 @@ footer {
 .box.post header {
 	padding-top: 0.5em;
 	/* Ajusta el padding-top para reducir el espacio sobre el encabezado */
-	margin: 0 0 1em 0;
+	margin: 0 0 0.5em 0;
 	/* Ajusta el margen inferior para reducir el espacio debajo del encabezado */
 }
 
@@ -2258,7 +2258,7 @@ ul.social li a.fa-google-plus:hover {
 	position: relative;
 	background: #ffffff;
 	border-bottom: solid 1px #ccc;
-	padding: 5em 0 4em 0;
+	padding: 5em 0 0em 0;
 	text-align: center;
 }
 
@@ -2939,25 +2939,28 @@ ul.social li a.fa-google-plus:hover {
 /* Game card (UFM) */
 
 .game-card {
+	width: 20em;
 	background-color: #fff;
 	border-radius: 5px;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 3px 10px rgba(15, 133, 11, 0.2);
 	padding: 0.2em;
 	margin-bottom: 0.2em;
 	text-align: center;
+	margin-left: 15em;
 }
 
 .game-card-image {
-	width: 80%;
-	height: 400px;
+	width: 90%;
+	height: 300px;
 	/* Ajusta este valor según el tamaño máximo deseado para las imágenes */
 	object-fit: cover;
+	border-radius: 20px;
 }
 
 /* Partidas header */
 
 .partidas-header {
-	font-size: 2.5em;
+	font-size: 10em;
 	/* Aumenta el tamaño de la fuente */
 	color: #d6ba1a;
 	/* Cambia el color del texto */
@@ -2967,8 +2970,10 @@ ul.social li a.fa-google-plus:hover {
 	/* Centra el título */
 	margin-top: 2em;
 	/* Aumenta el margen superior para separarlo de la sección anterior */
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 	/* Ajusta el margen inferior para separarlo del contenido de la sección */
+	animation: heartbeat;
+	animation-duration: 2s;
 }
 
 /* Small */
