@@ -291,7 +291,7 @@ table {
 .container {
 	margin: 0 auto;
 	max-width: 100%;
-	padding: 5em;
+	padding: 3em;
 }
 
 @media screen and (max-width: 1680px) {
@@ -2492,7 +2492,7 @@ ul.social li a.fa-google-plus:hover {
 #main {
 	position: relative;
 	background: #f7f7f7 url("images/bg02.png");
-	padding: 4em 0 4em 0;
+	padding: 3em 0 3em 0;
 }
 
 #main:before {
@@ -2943,10 +2943,13 @@ ul.social li a.fa-google-plus:hover {
 	background-color: #fff;
 	border-radius: 5px;
 	box-shadow: 0 3px 10px rgba(15, 133, 11, 0.2);
-	padding: 0.2em;
+	padding: 0.5em;
 	margin-bottom: 0.2em;
 	text-align: center;
-	margin-left: 15em;
+	flex: 0 0 auto;
+	flex-basis: calc((100% - 5em) / 6);
+	/* 6 cards per row, 1em space between cards */
+	margin-right: 1em;
 }
 
 .game-card-image {
@@ -2957,10 +2960,76 @@ ul.social li a.fa-google-plus:hover {
 	border-radius: 20px;
 }
 
+.game-card-container {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.game-card-inner-container {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.game-card-inner-container::-webkit-scrollbar {
+	display: none;
+}
+
+.arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	border: none;
+	padding: 0.5em 1em;
+	font-size: 1.5em;
+	cursor: pointer;
+	z-index: 2;
+	pointer-events: none;
+}
+
+.arrow-left {
+	left: 0;
+}
+
+.arrow-right {
+	right: 0;
+}
+
+.arrow-left::before,
+.arrow-right::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.3);
+	color: #fff;
+	border: none;
+	padding: 0.5em 0.8em;
+	font-size: 1.5em;
+	cursor: pointer;
+	pointer-events: all;
+}
+
+.arrow-left::before {
+	content: "\003C";
+}
+
+.arrow-right::before {
+	content: "\003E";
+}
+
 /* Partidas header */
 
 .partidas-header {
-	font-size: 10em;
+	font-size: 2em;
 	/* Aumenta el tamaño de la fuente */
 	color: #d6ba1a;
 	/* Cambia el color del texto */
@@ -2972,8 +3041,39 @@ ul.social li a.fa-google-plus:hover {
 	/* Aumenta el margen superior para separarlo de la sección anterior */
 	margin-bottom: 0.5em;
 	/* Ajusta el margen inferior para separarlo del contenido de la sección */
-	animation: heartbeat;
-	animation-duration: 2s;
+}
+
+/* New Footer */
+#footer {
+	background-color: #353434;
+	/* Ajusta el color de fondo del footer aquí */
+	padding: 1.5em 0;
+}
+
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.social-icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.social-icons a {
+	margin: 0 1em;
+	font-size: 1.5em;
+}
+
+.contact-info {
+	text-align: right;
+}
+
+.contact-info h3 {
+	margin-bottom: 0.5em;
 }
 
 /* Small */
@@ -3190,39 +3290,13 @@ ul.social li a.fa-google-plus:hover {
 		padding: 40px 0 20px 0;
 	}
 
-}
+	/* Game-cards */
 
-/* New Footer */
-#footer {
-	background-color: #353434;
-	/* Ajusta el color de fondo del footer aquí */
-	padding: 1.5em 0;
-}
+	.game-card {
+		flex-basis: calc((100% - 2em) / 3);
+		/* 3 cards per row, 1em space between cards on smaller screens */
+	}
 
-.footer-content {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-}
-
-.social-icons {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.social-icons a {
-	margin: 0 1em;
-	font-size: 1.5em;
-}
-
-.contact-info {
-	text-align: right;
-}
-
-.contact-info h3 {
-	margin-bottom: 0.5em;
 }
 
 /* Responsive design */
