@@ -1697,6 +1697,7 @@ header.major h2 {
 	display: inline;
 	margin: 0;
 	padding: 0 0em 0 0em;
+	font-size: 2em;
 }
 
 footer {
@@ -1709,16 +1710,39 @@ footer {
 	background: #ffffff;
 	border-bottom: solid 1px #ccc;
 	padding: 1em 0.75em 1em 0.75em;
+	height: 400px;
 	/* Ajusta el padding para reducir el espacio alrededor del contenido */
 }
 
-/*.box .image.featured {
+/* GM Container */
+
+.GM-container {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-template-rows: 1fr;
+}
+
+.GM-box {
+	padding-top: 1em;
+	border-radius: 1em;
+}
+
+.GM-box:hover {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+	-o-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+	box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+	background: rgba(68, 68, 68, 0.5);
+}
+
+/* .box .image.featured {
 	position: relative;
 	width: auto;
 	left: 1.75em;
 	top: 1.75em;
 	margin: -4.5em 0 4.25em -3.5em;
-}*/
+} */
 
 .box.post header {
 	padding-top: 0.5em;
@@ -1745,12 +1769,12 @@ footer {
 
 /* Ajustes para la sección Game Masters */
 .box .gm-info {
-	margin-bottom: 0.5em;
+	margin-bottom: 0.2em;
 	/* Ajusta el margen inferior para reducir la distancia entre los elementos */
 }
 
 .box .rating {
-	margin-bottom: 0.5em;
+	margin-bottom: 0.2em;
 	/* Ajusta el margen inferior para reducir la distancia entre las estrellas y el botón */
 }
 
@@ -1765,7 +1789,7 @@ button,
 	display: inline-block;
 	text-decoration: none;
 	cursor: pointer;
-	border: 0;
+	border-color: #151112;
 	border-radius: 5px;
 	background: #d6ba1a;
 	color: #fff !important;
@@ -2939,21 +2963,38 @@ ul.social li a.fa-google-plus:hover {
 /* Game card (UFM) */
 
 .game-card {
-	width: 20em;
-	background-color: #fff;
-	border-radius: 5px;
+	background: rgb(220, 220, 220, 0.8);
+	border-radius: 20px;
 	box-shadow: 0 3px 10px rgba(15, 133, 11, 0.2);
 	padding: 0.5em;
 	margin-bottom: 0.2em;
-	text-align: center;
+	/* text-align: center; */
 	flex: 0 0 auto;
-	flex-basis: calc((100% - 5em) / 6);
+	flex-basis: calc((100% - 7.5em) / 6);
 	/* 6 cards per row, 1em space between cards */
-	margin-right: 1em;
+	margin-right: 1.5em;
+	/* display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+
+}
+
+.game-card-text {
+	display: grid;
+	gap: 2px;
+	grid-template-columns: auto;
+	justify-items: left;
+}
+
+.game-card:hover {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+	-o-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+	box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+	background: rgba(68, 68, 68, 0.5);
 }
 
 .game-card-image {
-	width: 90%;
+	width: 100%;
 	height: 300px;
 	/* Ajusta este valor según el tamaño máximo deseado para las imágenes */
 	object-fit: cover;
@@ -2962,7 +3003,9 @@ ul.social li a.fa-google-plus:hover {
 
 .game-card-container {
 	position: relative;
-	width: 100%;
+	display: grid;
+	width: 1fr;
+	justify-content: center;
 	overflow: hidden;
 }
 
@@ -3024,6 +3067,46 @@ ul.social li a.fa-google-plus:hover {
 
 .arrow-right::before {
 	content: "\003E";
+}
+
+/* Zone */
+
+.zone {
+	cursor: pointer;
+	/* display: block; */
+	text-align: center;
+	font-size: 1em;
+	border-radius: 5px;
+	/* border: 1px solid #bbb; */
+	transition: all 0.3s linear;
+}
+
+.zone:hover {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+	-o-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+	box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+}
+
+.grey {
+	background: rgb(244, 244, 244, 0.5)
+}
+
+.yellow {
+	background: #d6ba1a;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, #d6ba1a 0%, #d6ba1a 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d6ba1a), color-stop(100%, #d6ba1a));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #d6ba1a 0%, #d6ba1a 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #d6ba1a 0%, #d6ba1a 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #d6ba1a 0%, #d6ba1a 100%);
+	/* IE10+ */
+	background: linear-gradient(top, #d6ba1a 0%, #d6ba1a 100%);
+	/* W3C */
 }
 
 /* Partidas header */
@@ -3297,6 +3380,20 @@ ul.social li a.fa-google-plus:hover {
 		/* 3 cards per row, 1em space between cards on smaller screens */
 	}
 
+}
+
+@media (min-width: 737px) and (max-width: 1100px) {
+	.game-card {
+		flex-basis: calc((100% - 3em) / 4);
+		/* 4 cards per row, 1em space between cards on medium screens */
+	}
+}
+
+@media (min-width: 1101px) and (max-width: 1300px) {
+	.game-card {
+		flex-basis: calc((100% - 3em) / 5);
+		/* 4 cards per row, 1em space between cards on medium screens */
+	}
 }
 
 /* Responsive design */
