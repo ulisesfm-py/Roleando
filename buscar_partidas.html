@@ -14,23 +14,41 @@
     <div class="page-wrapper" style="background-color: #ffffff;">
         <section class="header"">
             <!-- Logo -->
-            <h2>¡Encuentra tu aventura! Escoge tu camino</h2>
-        </section>
-
-        <div class=" nav-partidas">
+            <div style=" display:grid; grid-template-columns: 1fr 2fr 1fr;">
             <div><img src="images/Logos/tgm-logo.png" alt="" class="nav-logo"></div>
-            <div class="nav-buscador">
-                <nav id="nav">
-                    <ul>
-                        <li><a href="#">Tipo de partida</a></li>
-                        <li><a href="#">Sistema de juego</a></li>
-                        <li><a href="#">Nivel de Experiencia</a></li>
-                        <li><a href="#">Fecha</a></li>
-                        <li><a href="#">Precio</a></li>
-                    </ul>
-                </nav>
+            <div></div>
+            <div style=" display:grid; grid-template-columns: 1fr 1fr 1fr;">
+                <div></div>
+                <div><a href="#"> Iniciar sesión</a> </div>
+                <div><a href="#">Registrar </a></div>
             </div>
-            <div class="nav-perfil">Cuenta/Perfil</div>
+            <div></div>
+            <h2 style=" display: flex; justify-content: center; padding-top: 1em;">¡Encuentra tu aventura!
+                Escoge tu camino</h2>
+            <div></div>
+    </div>
+    </section>
+
+
+
+    <div class="search-container">
+        <input type="text" placeholder="Buscar partidas..." class="search-input" />
+        <select class="search-select">
+            <option value="all">Tipo de partida</option>
+            <option value="gm1">Campaña</option>
+            <option value="gm2">One-Shot</option>
+        </select>
+        <select class="search-select">
+            <option value="all">Fecha</option>
+            <option value="gm1">Campaña</option>
+            <option value="gm2">One-Shot</option>
+        </select>
+        <select class="search-select">
+            <option value="all">Precio</option>
+            <option value="gm1">Campaña</option>
+            <option value="gm2">One-Shot</option>
+        </select>
+        <button class="search-button">Buscar</button>
     </div>
 
     <section class="buscador-container">
