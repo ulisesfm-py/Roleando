@@ -1,0 +1,22 @@
+{
+  "name": "roleando",
+  "version": "1.0.0",
+  "description": "Roleando Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ulisesfm-py/Roleando.git"
+  },
+  "author": "ulisesfm-py",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ulisesfm-py/Roleando/issues"
+  },
+  "homepage": "https://github.com/ulisesfm-py/Roleando#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

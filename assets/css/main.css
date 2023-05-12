@@ -428,7 +428,7 @@ table {
 	width: 100%;
 	display: grid;
 	gap: 10px;
-	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 	grid-template-rows: 1fr;
 }
 
@@ -3060,6 +3060,15 @@ ul.social li a.fa-google-plus:hover {
 
 	}
 
+	.buscador-container {
+		width: 100%;
+		display: grid;
+		gap: 8px;
+		grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+		grid-template-rows: 1fr;
+		font-size: 12px;
+	}
+
 
 	/* Box */
 
@@ -3329,6 +3338,14 @@ ul.social li a.fa-google-plus:hover {
 
 	}
 
+	.buscador-container {
+		width: 100%;
+		display: grid;
+		gap: 5px;
+		grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+		grid-template-rows: 1fr;
+	}
+
 
 	/* Button */
 
@@ -3546,8 +3563,8 @@ ul.social li a.fa-google-plus:hover {
 	/* Search input */
 	.search-input {
 		flex: 1;
-		font-size: 0.6em;
-		padding: 0.5em 0.6em;
+		font-size: 0.5em;
+		padding: 0.5em 0.5em;
 		border: 1px solid #ccc;
 		border-radius: 4px;
 		outline: none;
@@ -3560,9 +3577,9 @@ ul.social li a.fa-google-plus:hover {
 
 	/* Search select */
 	.search-select {
-		font-size: 0.6em;
-		padding: 0.5em;
-		margin-left: 0.6em;
+		font-size: 0.5em;
+		padding: 0.4em;
+		margin-left: 0.2em;
 		border: 1px solid #ccc;
 		border-radius: 4px;
 		background-color: #fff;
@@ -3576,9 +3593,9 @@ ul.social li a.fa-google-plus:hover {
 
 	/* Search button */
 	.search-button {
-		font-size: 0.6em;
+		font-size: 0.5em;
 		font-weight: 600;
-		padding: 0.5em 0.8em;
+		padding: 0.4em 0.4em;
 		margin-left: 1em;
 		border: none;
 		border-radius: 4px;
